@@ -219,6 +219,7 @@ Public Class lblChrono
                 newPartie()
             End If
         End If
+        Wmp2.Ctlcontrols.stop()
         Dim Tempstot As Integer = tempsDep - tempsRestant
         SaveModule.nouvJoueur(NomDuJoueur, Tempstot.ToString() & "s", pairesTrouvees)
     End Sub

@@ -28,7 +28,7 @@ Public Class PersonaJeu
         playMusic()
         WmPersona2.settings.volume = 30
         Me.Text = "Temps restant : " & tempsRestant & "s"
-        nomDuJoueur.Text = persona_edition.CBNom.Text
+        nomDuJoueur.Text = persona_edition.CBNom.Text 'Je sais pas pourquoi ça marche pas :(
         ChargerImages()
         MélangerCartes()
         InitialiserGrille()
