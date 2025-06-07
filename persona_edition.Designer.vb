@@ -132,7 +132,7 @@ Partial Class persona_edition
         Me.Controls.Add(Me.PictureBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "persona_edition"
-        Me.Text = "persona_edition"
+        Me.Text = "Memory (Persona 3 edition)"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
