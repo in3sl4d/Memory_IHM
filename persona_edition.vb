@@ -38,8 +38,4 @@
             .Ctlcontrols.play()
         End With
     End Sub
-
-    Private Sub CBNom_TextChanged(sender As Object, e As EventArgs) Handles CBNom.TextChanged
-
-    End Sub
 End Class

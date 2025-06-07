@@ -60,7 +60,7 @@ Public Class Form1
             source.AddRange(noms.ToArray())
             CBNom.AutoCompleteCustomSource = source
 
-            Wmp.URL = "Music\Memories.wav"
+            Wmp.URL = "Music\Driftveil.wav"
             Wmp.settings.setMode("loop", True)
             Wmp.settings.volume = 30
             Wmp.Ctlcontrols.play()
