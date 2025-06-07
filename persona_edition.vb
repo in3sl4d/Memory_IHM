@@ -12,7 +12,7 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         WPersona.Ctlcontrols.stop()
-        Me.Close()
+        Me.Hide()
         PersonaJeu.Show()
     End Sub
 

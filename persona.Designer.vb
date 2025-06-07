@@ -27,13 +27,14 @@ Partial Class persona
         '
         'persona
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(800, 109)
+        Me.ClientSize = New System.Drawing.Size(900, 136)
         Me.DoubleBuffered = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "persona"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "persona"

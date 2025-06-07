@@ -29,6 +29,7 @@ Public Class PersonaJeu
         WmPersona2.settings.volume = 30
         Me.Text = "Temps restant : " & tempsRestant & "s"
         nomDuJoueur.Text = persona_edition.CBNom.Text 'Je sais pas pourquoi ça marche pas :(
+        persona_edition.Close()
         ChargerImages()
         MélangerCartes()
         InitialiserGrille()
