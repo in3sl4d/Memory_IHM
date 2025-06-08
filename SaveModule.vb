@@ -71,6 +71,7 @@
                     .cumulTmps = Integer.Parse(parties(4))
                 }
                     ScoresJoueur.Add(joueur)
+                    DernierScore = joueur
                 End If
             Next
         End If

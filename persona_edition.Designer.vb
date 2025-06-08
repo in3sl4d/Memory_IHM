@@ -27,9 +27,9 @@ Partial Class persona_edition
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.CBNom = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.WPersona = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.CBNom = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,14 +86,6 @@ Partial Class persona_edition
         Me.PictureBox4.TabIndex = 3
         Me.PictureBox4.TabStop = False
         '
-        'CBNom
-        '
-        Me.CBNom.Location = New System.Drawing.Point(768, 165)
-        Me.CBNom.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CBNom.Name = "CBNom"
-        Me.CBNom.Size = New System.Drawing.Size(205, 22)
-        Me.CBNom.TabIndex = 5
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -117,6 +109,13 @@ Partial Class persona_edition
         Me.WPersona.TabIndex = 7
         Me.WPersona.Visible = False
         '
+        'CBNom
+        '
+        Me.CBNom.Location = New System.Drawing.Point(792, 163)
+        Me.CBNom.Name = "CBNom"
+        Me.CBNom.Size = New System.Drawing.Size(170, 22)
+        Me.CBNom.TabIndex = 8
+        '
         'persona_edition
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -124,9 +123,9 @@ Partial Class persona_edition
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1059, 450)
+        Me.Controls.Add(Me.CBNom)
         Me.Controls.Add(Me.WPersona)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.CBNom)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -148,7 +147,7 @@ Partial Class persona_edition
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents CBNom As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents WPersona As AxWMPLib.AxWindowsMediaPlayer
+    Friend WithEvents CBNom As TextBox
 End Class

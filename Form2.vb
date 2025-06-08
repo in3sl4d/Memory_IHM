@@ -8,13 +8,7 @@ Public Class lblChrono
 
     Public Property NomDuJoueur As String
 
-    'Structure cartePoke
-    'Dim carte As Image
-    'Dim carteID As String
-    'End Structure
-
     Dim carre As New Media.SoundPlayer("Music\SFX\carreSFX.wav")
-
 
     Dim cartesIDs(jeuCartes - 1) As String
     Dim cartesImages(jeuCartes - 1) As Image
@@ -83,6 +77,7 @@ Public Class lblChrono
         If rep = MsgBoxResult.No Then
             Exit Sub
         Else
+            nouvJoueur(NomDuJoueur, 0, pairesTrouvees)
             newPartie()
         End If
     End Sub

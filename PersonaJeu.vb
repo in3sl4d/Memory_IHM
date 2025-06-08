@@ -16,7 +16,7 @@ Public Class PersonaJeu
     'Dim score As Integer = 0
     Dim pairesTrouvees As Integer = 0
 
-    Const tempsDep As Integer = 60
+    Const tempsDep As Integer = 45
     Dim tempsRestant As Integer = tempsDep
     Dim tempstot As Integer
 

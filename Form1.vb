@@ -13,11 +13,13 @@ Public Class Form1
     Private Sub btnQuitter_Click(sender As Object, e As EventArgs) Handles btnarret.Click
         Dim rep = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If rep = DialogResult.Yes Then
+            SaveInFile("joueurs.txt")
             Application.Exit()
         End If
     End Sub
 
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        SaveInFile("scores.txt")
         Wmp.Ctlcontrols.stop()
     End Sub
 
@@ -50,6 +52,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadFromFile("scores.txt")
         If File.Exists(cheminFichier) Then
             Dim noms = File.ReadAllLines(cheminFichier).ToList()
             CBNom.Items.AddRange(noms.ToArray())
