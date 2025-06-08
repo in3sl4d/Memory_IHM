@@ -225,7 +225,7 @@ Public Class lblChrono
 
     Private Sub newPartie()
         player.Stop()
-        Me.Hide()
+        Me.Close()
         Form1.Show()
     End Sub
 

@@ -73,7 +73,8 @@ Public Class Form1
     Private Sub btnScore_Click(sender As Object, e As EventArgs) Handles btnScore.Click
         Dim formScore As New Scores()
         formScore.Show()
-        Me.Close()
+        Wmp.Ctlcontrols.stop()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
