@@ -47,4 +47,33 @@
             Next
         End If
     End Sub
+
+    Public Sub SaveInFile(cheminFichier As String)
+        Using writer As New IO.StreamWriter(cheminFichier)
+            For Each joueur As Scores In ScoresJoueur
+                writer.WriteLine($"{joueur.nom};{joueur.tmpsMin};{joueur.nbCarresTrouv};{joueur.nbParties};{joueur.cumulTmps}")
+            Next
+        End Using
+    End Sub
+
+    Public Sub LoadFromFile(cheminFichier As String)
+        If IO.File.Exists(cheminFichier) Then
+            ScoresJoueur.Clear()
+            Dim lignes = IO.File.ReadAllLines(cheminFichier)
+            For Each ligne In lignes
+                Dim parties = ligne.Split(";"c)
+                If parties.Length = 5 Then
+                    Dim joueur As New Scores With {
+                    .nom = parties(0),
+                    .tmpsMin = Integer.Parse(parties(1)), 'on convertit les str en integer
+                    .nbCarresTrouv = Integer.Parse(parties(2)),
+                    .nbParties = Integer.Parse(parties(3)),
+                    .cumulTmps = Integer.Parse(parties(4))
+                }
+                    ScoresJoueur.Add(joueur)
+                End If
+            Next
+        End If
+    End Sub
+
 End Module

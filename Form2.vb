@@ -223,23 +223,11 @@ Public Class lblChrono
                 newPartie()
             End If
         End If
-        Wmp2.Ctlcontrols.stop()
     End Sub
 
     Private Sub newPartie()
         Me.Hide()
         Form1.Show()
-    End Sub
-
-    Public Sub EnregistrerScore(nom As String, temps As String, nbPaires As Integer)
-        Dim appDir As String = My.Application.Info.DirectoryPath
-        Dim scoresFile As String = Path.Combine(appDir, "scores.txt")
-
-        ' Formate la ligne à écrire
-        Dim ligne As String = nom & ";" & temps & ";" & nbPaires.ToString()
-
-        ' Ajoute la ligne à la fin du fichier (ou crée le fichier s’il n’existe pas)
-        File.AppendAllText(scoresFile, ligne & Environment.NewLine)
     End Sub
 
 End Class
