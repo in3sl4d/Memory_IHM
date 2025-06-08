@@ -2,7 +2,7 @@
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         WPersona.Ctlcontrols.stop()
-        Me.Hide()
+        Me.Close()
         persona_scores.Show()
     End Sub
 
@@ -12,7 +12,7 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         WPersona.Ctlcontrols.stop()
-        Me.Hide()
+        Me.Close()
         PersonaJeu.Show()
     End Sub
 
@@ -37,5 +37,11 @@
             .settings.volume = 30            ' Volume entre 0 et 100
             .Ctlcontrols.play()
         End With
+    End Sub
+
+    Private Sub CBNom_TextChanged(sender As Object, e As EventArgs) Handles CBNom.TextChanged
+        If (CBNom.Text.Length >= 3) Then
+            PictureBox2.Enabled = True
+        End If
     End Sub
 End Class

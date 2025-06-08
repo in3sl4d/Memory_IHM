@@ -59,11 +59,11 @@ Public Class PersonaJeu
         If tempsRestant <= 0 Then
             Timer1.Stop()
             MessageBox.Show("Temps écoulé ! Vous avez trouvé : " & pairesTrouvees & " carrés !", "Fin du jeu", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            SaveModule.nouvJoueur(nomDuJoueur.Text, 0, pairesTrouvees)
             Dim accueil As New Form1()
 
             'player.Stop()
             WmPersona2.Ctlcontrols.stop()
-            SaveModule.nouvJoueur(nomDuJoueur.Text, 0, pairesTrouvees)
             Me.Close()
             accueil.Show()
 
@@ -75,6 +75,7 @@ Public Class PersonaJeu
         If rep = MsgBoxResult.No Then
             Exit Sub
         Else
+            SaveModule.nouvJoueur(nomDuJoueur.Text, 0, pairesTrouvees)
             newPartie()
         End If
     End Sub
@@ -217,7 +218,7 @@ Public Class PersonaJeu
 
     Private Sub newPartie()
         WmPersona2.Ctlcontrols.stop()
-        Me.Hide()
+        Me.Close()
         persona_edition.Show()
     End Sub
 
