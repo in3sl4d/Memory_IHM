@@ -50,7 +50,6 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         If File.Exists(cheminFichier) Then
             Dim noms = File.ReadAllLines(cheminFichier).ToList()
             CBNom.Items.AddRange(noms.ToArray())
@@ -74,7 +73,7 @@ Public Class Form1
     Private Sub btnScore_Click(sender As Object, e As EventArgs) Handles btnScore.Click
         Dim formScore As New Scores()
         formScore.Show()
-
+        Me.Close()
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click

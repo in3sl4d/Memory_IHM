@@ -23,12 +23,8 @@ Partial Class Scores
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Scores))
-        Me.lblNom = New System.Windows.Forms.Label()
-        Me.lblTemps = New System.Windows.Forms.Label()
-        Me.lblPaires = New System.Windows.Forms.Label()
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnRetour = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.pic1 = New System.Windows.Forms.PictureBox()
         Me.pic3 = New System.Windows.Forms.PictureBox()
@@ -40,8 +36,15 @@ Partial Class Scores
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.btnAfficher = New System.Windows.Forms.Button()
+        Me.btnTrier = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ListBox5 = New System.Windows.Forms.ListBox()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,38 +57,6 @@ Partial Class Scores
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lblNom
-        '
-        Me.lblNom.AutoSize = True
-        Me.lblNom.Location = New System.Drawing.Point(19, 42)
-        Me.lblNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblNom.Name = "lblNom"
-        Me.lblNom.Size = New System.Drawing.Size(48, 16)
-        Me.lblNom.TabIndex = 0
-        Me.lblNom.Text = "Label1"
-        '
-        'lblTemps
-        '
-        Me.lblTemps.AutoSize = True
-        Me.lblTemps.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.lblTemps.Location = New System.Drawing.Point(19, 111)
-        Me.lblTemps.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblTemps.Name = "lblTemps"
-        Me.lblTemps.Size = New System.Drawing.Size(48, 16)
-        Me.lblTemps.TabIndex = 1
-        Me.lblTemps.Text = "Label2"
-        '
-        'lblPaires
-        '
-        Me.lblPaires.AutoSize = True
-        Me.lblPaires.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.lblPaires.Location = New System.Drawing.Point(237, 276)
-        Me.lblPaires.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblPaires.Name = "lblPaires"
-        Me.lblPaires.Size = New System.Drawing.Size(48, 16)
-        Me.lblPaires.TabIndex = 2
-        Me.lblPaires.Text = "Label3"
         '
         'picLogo
         '
@@ -117,23 +88,11 @@ Partial Class Scores
         Me.btnRetour.Text = "Retour"
         Me.btnRetour.UseVisualStyleBackColor = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.lblNom)
-        Me.Panel1.Controls.Add(Me.lblTemps)
-        Me.Panel1.Location = New System.Drawing.Point(219, 96)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(626, 274)
-        Me.Panel1.TabIndex = 8
-        '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(459, -28)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(283, 167)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -199,7 +158,7 @@ Partial Class Scores
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(3, 15)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(284, 191)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -210,7 +169,7 @@ Partial Class Scores
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
         Me.PictureBox4.Location = New System.Drawing.Point(696, 332)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(283, 167)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -221,7 +180,7 @@ Partial Class Scores
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(-28, 178)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(248, 192)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -232,7 +191,7 @@ Partial Class Scores
         '
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
         Me.PictureBox7.Location = New System.Drawing.Point(241, 479)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(108, 80)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -244,12 +203,91 @@ Partial Class Scores
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
         Me.PictureBox8.Location = New System.Drawing.Point(843, 15)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(271, 586)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 19
         Me.PictureBox8.TabStop = False
+        '
+        'btnAfficher
+        '
+        Me.btnAfficher.Location = New System.Drawing.Point(544, 115)
+        Me.btnAfficher.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAfficher.Name = "btnAfficher"
+        Me.btnAfficher.Size = New System.Drawing.Size(73, 22)
+        Me.btnAfficher.TabIndex = 27
+        Me.btnAfficher.Text = "Afficher"
+        Me.btnAfficher.UseVisualStyleBackColor = True
+        '
+        'btnTrier
+        '
+        Me.btnTrier.Location = New System.Drawing.Point(622, 115)
+        Me.btnTrier.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnTrier.Name = "btnTrier"
+        Me.btnTrier.Size = New System.Drawing.Size(73, 22)
+        Me.btnTrier.TabIndex = 26
+        Me.btnTrier.Text = "Trier"
+        Me.btnTrier.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(309, 115)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(230, 24)
+        Me.ComboBox1.TabIndex = 25
+        '
+        'ListBox5
+        '
+        Me.ListBox5.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ListBox5.FormattingEnabled = True
+        Me.ListBox5.ItemHeight = 16
+        Me.ListBox5.Location = New System.Drawing.Point(622, 162)
+        Me.ListBox5.Name = "ListBox5"
+        Me.ListBox5.Size = New System.Drawing.Size(73, 196)
+        Me.ListBox5.TabIndex = 24
+        '
+        'ListBox4
+        '
+        Me.ListBox4.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.ItemHeight = 16
+        Me.ListBox4.Location = New System.Drawing.Point(544, 162)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.Size = New System.Drawing.Size(73, 196)
+        Me.ListBox4.TabIndex = 23
+        '
+        'ListBox3
+        '
+        Me.ListBox3.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.ItemHeight = 16
+        Me.ListBox3.Location = New System.Drawing.Point(466, 162)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(73, 196)
+        Me.ListBox3.TabIndex = 22
+        '
+        'ListBox2
+        '
+        Me.ListBox2.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 16
+        Me.ListBox2.Location = New System.Drawing.Point(387, 162)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(73, 196)
+        Me.ListBox2.TabIndex = 21
+        '
+        'ListBox1
+        '
+        Me.ListBox1.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(309, 162)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(73, 196)
+        Me.ListBox1.TabIndex = 20
         '
         'Scores
         '
@@ -257,13 +295,19 @@ Partial Class Scores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.Controls.Add(Me.btnAfficher)
+        Me.Controls.Add(Me.btnTrier)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ListBox5)
+        Me.Controls.Add(Me.ListBox4)
+        Me.Controls.Add(Me.ListBox3)
+        Me.Controls.Add(Me.ListBox2)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.pic1)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.pic4)
-        Me.Controls.Add(Me.lblPaires)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnRetour)
         Me.Controls.Add(Me.picLogo)
         Me.Controls.Add(Me.PictureBox3)
@@ -272,12 +316,10 @@ Partial Class Scores
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox5)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Scores"
         Me.Text = "Form3"
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -293,13 +335,8 @@ Partial Class Scores
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblNom As Label
-    Friend WithEvents lblTemps As Label
-    Friend WithEvents lblPaires As Label
     Friend WithEvents picLogo As PictureBox
     Friend WithEvents btnRetour As Button
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents pic1 As PictureBox
     Friend WithEvents pic3 As PictureBox
     Friend WithEvents pic2 As PictureBox
@@ -311,4 +348,12 @@ Partial Class Scores
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents btnAfficher As Button
+    Friend WithEvents btnTrier As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ListBox5 As ListBox
+    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents ListBox1 As ListBox
 End Class

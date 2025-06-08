@@ -218,14 +218,13 @@ Public Class lblChrono
                 SaveModule.nouvJoueur(NomDuJoueur, Tempstot, pairesTrouvees)
 
                 'EnregistrerScore(NomDuJoueur, tempsRestant & "s", pairesTrouvees)
-                Wmp2.Ctlcontrols.stop()
-                player.Stop()
                 newPartie()
             End If
         End If
     End Sub
 
     Private Sub newPartie()
+        player.Stop()
         Me.Hide()
         Form1.Show()
     End Sub

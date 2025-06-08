@@ -23,7 +23,7 @@ Public Class PersonaJeu
     Dim player As SoundPlayer
 
     Private Sub PersonaJeu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        WmPersona2.URL = "Music\Its Going Down Now.wav"
+        WmPersona2.URL = "Music\Persona_mode\Its Going Down Now.wav"
         WmPersona2.settings.setMode("loop", True)
         WmPersona2.Ctlcontrols.play()
         playMusic()
@@ -71,7 +71,12 @@ Public Class PersonaJeu
     End Sub
 
     Private Sub btnAbandon_Click(sender As Object, e As EventArgs) Handles btnAbandon.Click
-        Close()
+        Dim rep = MsgBox("Voulez-vous vraiment quitter ? ", MsgBoxStyle.YesNo, "Quitter")
+        If rep = MsgBoxResult.No Then
+            Exit Sub
+        Else
+            newPartie()
+        End If
     End Sub
 
     Public Function ChargerImage(nomFichier As String) As Image
@@ -216,24 +221,7 @@ Public Class PersonaJeu
         persona_edition.Show()
     End Sub
 
-    Public Sub EnregistrerScore(nom As String, temps As String, nbPaires As Integer)
-        Dim appDir As String = My.Application.Info.DirectoryPath
-        Dim scoresFile As String = Path.Combine(appDir, "scores.txt")
-
-        ' Formate la ligne à écrire
-        Dim ligne As String = nom & ";" & temps & ";" & nbPaires.ToString()
-
-        ' Ajoute la ligne à la fin du fichier (ou crée le fichier s’il n’existe pas)
-        File.AppendAllText(scoresFile, ligne & Environment.NewLine)
-    End Sub
-
     Private Sub lblChrono_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim rep = MsgBox("Voulez-vous vraiment quitter ? ", MsgBoxStyle.YesNo, "Quitter")
-        If rep = MsgBoxResult.No Then
-            e.Cancel = True
-        Else
-            newPartie()
-        End If
 
     End Sub
 End Class

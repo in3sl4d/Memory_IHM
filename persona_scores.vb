@@ -2,7 +2,7 @@
 
 Public Class persona_scores
 
-    Dim victory As New Media.SoundPlayer("Music\p3v.wav")
+    Dim victory As New Media.SoundPlayer("Music\Persona_mode\p3v.wav")
     Dim ordreCroissant As Boolean = False
 
     Private Sub persona_scores_Load(sender As Object, e As EventArgs) Handles MyBase.Load

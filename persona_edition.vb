@@ -32,7 +32,7 @@
             CBNom.Text = Form1.CBNom.Text
         End If
         With WPersona
-            .URL = "Music\Color Your Night.wav"
+            .URL = "Music\Persona_mode\Color Your Night.wav"
             .settings.setMode("loop", True)  ' Lecture en boucle
             .settings.volume = 30            ' Volume entre 0 et 100
             .Ctlcontrols.play()
