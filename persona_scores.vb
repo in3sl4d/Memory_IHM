@@ -21,12 +21,14 @@ Public Class persona_scores
         ListBox2.Items.Clear() ' score max
         ListBox3.Items.Clear() ' temps min
         ListBox4.Items.Clear() ' parties
+        ListBox5.Items.Clear()
 
         For Each joueur As SaveModule.Scores In ScoresJoueur
             ListBox1.Items.Add(joueur.nom)
             ListBox2.Items.Add(joueur.nbCarresTrouv)
-            ListBox3.Items.Add(joueur.tmps)
+            ListBox3.Items.Add(joueur.tmpsMin)
             ListBox4.Items.Add(joueur.nbParties)
+            ListBox5.Items.Add(joueur.cumulTmps)
         Next
     End Sub
 
@@ -56,7 +58,7 @@ Public Class persona_scores
         If joueur.nom <> "" Then
             MsgBox("Nom : " & joueur.nom & vbCrLf &
                    "Score max : " & joueur.nbCarresTrouv & vbCrLf &
-                   "Temps min : " & joueur.tmps & " sec" & vbCrLf &
+                   "Temps min : " & joueur.tmpsMin & " sec" & vbCrLf &
                    "Parties : " & joueur.nbParties & vbCrLf, MsgBoxStyle.Information)
         Else
             MsgBox("Joueur non trouvé.")

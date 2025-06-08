@@ -15,6 +15,7 @@ Public Class lblChrono
 
     Dim carre As New Media.SoundPlayer("Music\SFX\carreSFX.wav")
 
+
     Dim cartesIDs(jeuCartes - 1) As String
     Dim cartesImages(jeuCartes - 1) As Image
     Dim cartesRetournees As New List(Of PictureBox)()
@@ -29,6 +30,7 @@ Public Class lblChrono
 
     Const tempsDep As Integer = 60
     Dim tempsRestant As Integer = tempsDep
+    Dim Tempstot As Integer
 
     Dim player As SoundPlayer
     Private Sub playMusic()
@@ -68,6 +70,7 @@ Public Class lblChrono
             MessageBox.Show("Temps écoulé ! Vous avez trouvé : " & pairesTrouvees & " carrés !", "Fin du jeu", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Dim accueil As New Form1()
             player.Stop()
+            nouvJoueur(NomDuJoueur, 0, pairesTrouvees)
             Me.Close()
             accueil.Show()
 
@@ -211,7 +214,8 @@ Public Class lblChrono
             If pairesTrouvees = nbCarres Then ' 5 groupes de 4 cartes = victoire
                 Timer1.Stop()
                 MessageBox.Show("Bravo, vous avez gagné !", "Victoire", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                SaveModule.nouvJoueur(NomDuJoueur, tempsRestant & "s", pairesTrouvees)
+                Tempstot = tempsDep - tempsRestant
+                SaveModule.nouvJoueur(NomDuJoueur, Tempstot, pairesTrouvees)
 
                 'EnregistrerScore(NomDuJoueur, tempsRestant & "s", pairesTrouvees)
                 Wmp2.Ctlcontrols.stop()
@@ -220,8 +224,6 @@ Public Class lblChrono
             End If
         End If
         Wmp2.Ctlcontrols.stop()
-        Dim Tempstot As Integer = tempsDep - tempsRestant
-        SaveModule.nouvJoueur(NomDuJoueur, Tempstot.ToString() & "s", pairesTrouvees)
     End Sub
 
     Private Sub newPartie()

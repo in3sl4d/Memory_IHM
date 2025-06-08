@@ -6,7 +6,7 @@
 
         If joueur.nom <> "" Then
             lblNom.Text = "Nom : " & joueur.nom
-            lblTemps.Text = "Tu as gagné la partie à (gros nul): " & joueur.tmps
+            lblTemps.Text = "Tu as gagné la partie à (gros nul): " & joueur.tmpsMin
             lblPaires.Text = "Paires trouvées : " & joueur.nbCarresTrouv
         Else
             lblNom.Text = "Nom : Aucun score disponible"

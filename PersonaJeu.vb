@@ -18,6 +18,7 @@ Public Class PersonaJeu
 
     Const tempsDep As Integer = 60
     Dim tempsRestant As Integer = tempsDep
+    Dim tempstot As Integer
 
     Dim player As SoundPlayer
 
@@ -62,6 +63,7 @@ Public Class PersonaJeu
 
             'player.Stop()
             WmPersona2.Ctlcontrols.stop()
+            SaveModule.nouvJoueur(nomDuJoueur.Text, 0, pairesTrouvees)
             Me.Close()
             accueil.Show()
 
@@ -199,15 +201,13 @@ Public Class PersonaJeu
             If pairesTrouvees = nbCarres Then ' 5 groupes de 4 cartes = victoire
                 Timer1.Stop()
                 MessageBox.Show("Bravo, vous avez gagné !", "Victoire", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                SaveModule.nouvJoueur(nomDuJoueur.Text, tempsRestant & "s", pairesTrouvees)
+                SaveModule.nouvJoueur(nomDuJoueur.Text, tempsRestant, pairesTrouvees)
 
                 'EnregistrerScore(NomDuJoueur, tempsRestant & "s", pairesTrouvees)
                 WmPersona2.Ctlcontrols.stop()
                 newPartie()
             End If
         End If
-        Dim Tempstot As Integer = tempsDep - tempsRestant
-        SaveModule.nouvJoueur(NomDuJoueur.text, Tempstot.ToString() & "s", pairesTrouvees)
     End Sub
 
     Private Sub newPartie()

@@ -7,7 +7,7 @@
         Dim cumulTmps As Integer
     End Structure
 
-    Public ScoresJoueur() As Scores
+    Public ScoresJoueur As New List(Of Scores)
     Public DernierScore As Scores
 
     Public Function joueurExiste(joueur As Scores)
@@ -25,36 +25,31 @@
         Dim joueur As Scores
         joueur.nom = nom
         If (joueurExiste(joueur) = False) Then
-            ReDim ScoresJoueur(0)
-            ScoresJoueur(0).nom = nom
-            ScoresJoueur(0).tmpsMin = temps
-            ScoresJoueur(0).nbCarresTrouv = carres
-            ScoresJoueur(0).nbParties = 1
-            ScoresJoueur(0).cumulTmps = temps
-            DernierScore = ScoresJoueur(0)
+            joueur.tmpsMin = temps
+            joueur.nbCarresTrouv = carres
+            joueur.nbParties = 1
+            joueur.cumulTmps = temps
+            DernierScore = joueur
             Return
         Else
-            For i As Integer = 0 To ScoresJoueur.Length - 1
+            For i As Integer = 0 To ScoresJoueur.Count - 1
                 If ScoresJoueur(i).nom = nom Then
-                    If carres > ScoresJoueur(i).nbCarresTrouv Then
-                        ScoresJoueur(i).nbCarresTrouv = carres
-                        ScoresJoueur(i).tmpsMin = temps
-                        ScoresJoueur(i).nbParties += 1
+                    joueur = ScoresJoueur(i)
+                    If carres > joueur.nbCarresTrouv Then
+                        joueur.nbCarresTrouv = carres
+                        joueur.tmpsMin = temps
                     End If
-                    ScoresJoueur(i).cumulTmps += temps
+                    joueur.nbParties += 1
+                    joueur.cumulTmps += temps
+                    ScoresJoueur(i) = joueur
                     DernierScore = ScoresJoueur(i)
                     Return
                 End If
             Next
         End If
 
-
-        ReDim Preserve ScoresJoueur(ScoresJoueur.Length)
-        Dim idx As Integer = ScoresJoueur.Length - 1
-        ScoresJoueur(idx).nom = nom
-        ScoresJoueur(idx).tmpsMin = temps
-        ScoresJoueur(idx).nbCarresTrouv = carres
-        ScoresJoueur(idx).nbParties += 1
+        Dim idx As Integer = ScoresJoueur.Count - 1
+        ScoresJoueur(idx) = joueur
         DernierScore = ScoresJoueur(idx)
     End Sub
 
